@@ -9,5 +9,15 @@
 
 <ion-content padding>
   <ion-button (click)="scan()">Scan</ion-button>
+  <br>
   barcode: {{ barcode }}
+  <ion-card *ngIf="model">
+    <!--{{ model.product.image_ingredients_small_url }}-->
+    <img src="{{ model.product.image_ingredients_small_url }}">
+    <ion-list>
+      <ion-item *ngFor="let item of model.product.ingredients">
+        {{ item.text }}
+      </ion-item>
+    </ion-list>
+  </ion-card>
 </ion-content>
