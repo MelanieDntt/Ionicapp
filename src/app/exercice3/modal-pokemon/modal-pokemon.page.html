@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pokemon Details</ion-title>
+    <ion-button slot="end" (click)="dismiss()" size="small" color="danger" shape='pill'>
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <img src="{{ model?.sprites.front_default }}">
+  <img src="{{ model?.sprites.back_default }}">
+  <br>
+  <img src="{{ model?.sprites.front_shiny }}">
+  <img src="{{ model?.sprites.back_shiny }}">
+  <h3>{{  model?.name }}</h3>
+  <p>Height : {{ model?.height }} cm</p>
+  <p>Weight : {{ model?.weight }} g</p>
+  <p *ngFor="let item of model?.types">type : {{item.type.name}}</p>
+
+  <div style="display: block">
+    <canvas baseChart
+      [datasets]="radarChartData"
+      [options]="radarChartOptions"
+      [labels]="radarChartLabels"
+      [chartType]="radarChartType">
+    </canvas>
+  </div>
+</ion-content>

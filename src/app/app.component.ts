@@ -12,14 +12,54 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
-      url: '/home',
-      icon: 'home'
+      title: 'Binding',
+      icon: 'moon',
+      url: '/exemple1'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Event',
+      icon: 'paw',
+      url: '/exemple2'
+    },
+    {
+      title: 'Exercice1 - Chrono',
+      icon: 'settings',
+      url: '/exercice1'
+    },
+    {
+      title: '*ngIf',
+      icon: 'planet',
+      url: '/exemple3'
+    },
+    {
+      title: '*ngFor',
+      icon: 'star',
+      url: '/exemple4'
+    },
+    {
+      title: 'Binding 2 ways',
+      icon: 'snow',
+      url: '/exemple5'
+    },
+    {
+      title: 'Exercice2',
+      icon: 'basket',
+      url: '/exercice2'
+    },
+    {
+      title: 'Meteo',
+      icon: 'help-buoy',
+      url: '/exemple6'
+    },
+    {
+      title: 'Exercice3',
+      icon: 'rose',
+      url: '/exercice3'
+    },
+    {
+      title: 'Camera',
+      icon: 'barcode',
+      url: '/camera'
     }
   ];
 

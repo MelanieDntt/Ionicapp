@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="tertiary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>exercice2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label position="floating">Article</ion-label>
+    <ion-input [(ngModel)]="item"></ion-input>
+  </ion-item>
+  <ion-button (click)="add()" color="tertiary" fill="outline" shape="pill" [disabled]="!item" >
+    <ion-icon name="add"></ion-icon>
+  </ion-button>
+  <ion-item *ngFor="let elem of tab" [ngClass]="{ 'barre': elem.isChecked }">
+    <p>{{ elem.name }} </p>
+    <ion-button (click)="checked(elem)" color="success" size='small'><ion-icon name="checkmark" color="light"></ion-icon></ion-button>
+    <ion-button (click)="showAlert(elem)" color="danger" size='small' slot="end"><ion-icon name="trash"></ion-icon></ion-button>
+  </ion-item> 
+</ion-content>

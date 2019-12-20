@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="tertiary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>exercice1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <p>{{ chrono }}</p>
+
+  <ion-button (click)="start()" color="tertiary" shape="pill" [disabled]="started == true">Start</ion-button>
+  <ion-button (click)="stop()" color="warning" shape="pill" [disabled]="started == false">Stop</ion-button>
+  <ion-button (click)="reset()" color="danger" shape="pill" [disabled]="chrono == 0">Reset</ion-button>
+</ion-content>
